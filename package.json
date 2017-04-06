@@ -1,17 +1,40 @@
 {
-    "buildNpmdoc":"glob-stream",
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "buildNpmdoc": "glob-stream",
+    "description": "api documentation for [glob-stream (v6.1.0)](https://github.com/gulpjs/glob-stream#readme) [![npm package](https://img.shields.io/npm/v/npmdoc-glob-stream.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-glob-stream) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-glob-stream.svg)](https://travis-ci.org/npmdoc/node-npmdoc-glob-stream)",
     "devDependencies": {
-        "glob-stream": "*",
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "glob-stream": "*",
         "utility2": "kaizhu256/node-utility2#alpha"
     },
-    "name":"npmdoc-glob-stream",
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-glob-stream",
+    "keywords": [
+        "documentation",
+        "glob-stream"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_glob_stream.js",
+    "name": "npmdoc-glob-stream",
+    "nameAlias": "npmdoc_glob_stream",
+    "nameOriginal": "npmdoc-glob-stream",
+    "os": [
+        "darwin",
+        "linux"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/npmdoc/node-npmdoc-glob-stream"
     },
     "scripts": {
-        "build-ci": "utility2 shReadmeTest build_ci.sh"
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "(set -e; npm install \"kaizhu256/node-utility2#alpha\"; utility2 shDeployHeroku)",
+        "postinstall": "if [ -f npm_scripts.sh ]; then ./npm_scripts.sh postinstall; fi",
+        "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
     },
     "version": "0.0.1"
 }
