@@ -1,54 +1,57 @@
-<svg height="814" width="720" xmlns="http://www.w3.org/2000/svg">
-<rect height="814" fill="#555" width="720"></rect>
+<svg height="862" width="720" xmlns="http://www.w3.org/2000/svg">
+<rect height="862" fill="#555" width="720"></rect>
 <text fill="#7f7" font-family="Courier New" font-size="12" xml:space="preserve">
-<tspan x="10" y="26">└─┬ glob-stream@6.1.0 </tspan>
-<tspan x="10" y="42">  ├── extend@3.0.0 </tspan>
-<tspan x="10" y="58">  ├─┬ glob@7.1.1 </tspan>
-<tspan x="10" y="74">  │ ├── fs.realpath@1.0.0 </tspan>
-<tspan x="10" y="90">  │ ├─┬ inflight@1.0.6 </tspan>
-<tspan x="10" y="106">  │ │ └── wrappy@1.0.2 </tspan>
-<tspan x="10" y="122">  │ ├── inherits@2.0.3 </tspan>
-<tspan x="10" y="138">  │ ├─┬ minimatch@3.0.3 </tspan>
-<tspan x="10" y="154">  │ │ └─┬ brace-expansion@1.1.6 </tspan>
-<tspan x="10" y="170">  │ │   ├── balanced-match@0.4.2 </tspan>
-<tspan x="10" y="186">  │ │   └── concat-map@0.0.1 </tspan>
-<tspan x="10" y="202">  │ ├── once@1.4.0 </tspan>
-<tspan x="10" y="218">  │ └── path-is-absolute@1.0.1 </tspan>
-<tspan x="10" y="234">  ├─┬ glob-parent@3.1.0 </tspan>
-<tspan x="10" y="250">  │ ├─┬ is-glob@3.1.0 </tspan>
-<tspan x="10" y="266">  │ │ └── is-extglob@2.1.1 </tspan>
-<tspan x="10" y="282">  │ └── path-dirname@1.0.2 </tspan>
-<tspan x="10" y="298">  ├── is-negated-glob@1.0.0 </tspan>
-<tspan x="10" y="314">  ├─┬ ordered-read-streams@1.0.0 </tspan>
-<tspan x="10" y="330">  │ └── is-stream@1.1.0 </tspan>
-<tspan x="10" y="346">  ├─┬ pumpify@1.3.5 </tspan>
-<tspan x="10" y="362">  │ ├─┬ duplexify@3.5.0 </tspan>
-<tspan x="10" y="378">  │ │ ├─┬ end-of-stream@1.0.0 </tspan>
-<tspan x="10" y="394">  │ │ │ └── once@1.3.3 </tspan>
-<tspan x="10" y="410">  │ │ └── stream-shift@1.0.0 </tspan>
-<tspan x="10" y="426">  │ └─┬ pump@1.0.2 </tspan>
-<tspan x="10" y="442">  │   └── end-of-stream@1.4.0 </tspan>
-<tspan x="10" y="458">  ├─┬ readable-stream@2.2.6 </tspan>
-<tspan x="10" y="474">  │ ├── buffer-shims@1.0.0 </tspan>
-<tspan x="10" y="490">  │ ├── core-util-is@1.0.2 </tspan>
-<tspan x="10" y="506">  │ ├── isarray@1.0.0 </tspan>
-<tspan x="10" y="522">  │ ├── process-nextick-args@1.0.7 </tspan>
-<tspan x="10" y="538">  │ ├── string_decoder@0.10.31 </tspan>
-<tspan x="10" y="554">  │ └── util-deprecate@1.0.2 </tspan>
-<tspan x="10" y="570">  ├── remove-trailing-separator@1.0.1 </tspan>
-<tspan x="10" y="586">  ├─┬ to-absolute-glob@2.0.1 </tspan>
-<tspan x="10" y="602">  │ ├─┬ extend-shallow@2.0.1 </tspan>
-<tspan x="10" y="618">  │ │ └── is-extendable@0.1.1 </tspan>
-<tspan x="10" y="634">  │ └─┬ is-absolute@0.2.6 </tspan>
-<tspan x="10" y="650">  │   ├─┬ is-relative@0.2.1 </tspan>
-<tspan x="10" y="666">  │   │ └─┬ is-unc-path@0.1.2 </tspan>
-<tspan x="10" y="682">  │   │   └── unc-path-regex@0.1.2 </tspan>
-<tspan x="10" y="698">  │   └── is-windows@0.2.0 </tspan>
-<tspan x="10" y="714">  └─┬ unique-stream@2.2.1 </tspan>
-<tspan x="10" y="730">    ├─┬ json-stable-stringify@1.0.1 </tspan>
-<tspan x="10" y="746">    │ └── jsonify@0.0.0 </tspan>
-<tspan x="10" y="762">    └─┬ through2-filter@2.0.0 </tspan>
-<tspan x="10" y="778">      ├── through2@2.0.3 </tspan>
-<tspan x="10" y="794">      └── xtend@4.0.1</tspan>
+<tspan x="10" y="26">2 megabytes installed</tspan>
+<tspan x="10" y="42"></tspan>
+<tspan x="10" y="58">node_modules</tspan>
+<tspan x="10" y="74">└─┬ glob-stream@6.1.0 </tspan>
+<tspan x="10" y="90">  ├── extend@3.0.0 </tspan>
+<tspan x="10" y="106">  ├─┬ glob@7.1.1 </tspan>
+<tspan x="10" y="122">  │ ├── fs.realpath@1.0.0 </tspan>
+<tspan x="10" y="138">  │ ├─┬ inflight@1.0.6 </tspan>
+<tspan x="10" y="154">  │ │ └── wrappy@1.0.2 </tspan>
+<tspan x="10" y="170">  │ ├── inherits@2.0.3 </tspan>
+<tspan x="10" y="186">  │ ├─┬ minimatch@3.0.3 </tspan>
+<tspan x="10" y="202">  │ │ └─┬ brace-expansion@1.1.7 </tspan>
+<tspan x="10" y="218">  │ │   ├── balanced-match@0.4.2 </tspan>
+<tspan x="10" y="234">  │ │   └── concat-map@0.0.1 </tspan>
+<tspan x="10" y="250">  │ ├── once@1.4.0 </tspan>
+<tspan x="10" y="266">  │ └── path-is-absolute@1.0.1 </tspan>
+<tspan x="10" y="282">  ├─┬ glob-parent@3.1.0 </tspan>
+<tspan x="10" y="298">  │ ├─┬ is-glob@3.1.0 </tspan>
+<tspan x="10" y="314">  │ │ └── is-extglob@2.1.1 </tspan>
+<tspan x="10" y="330">  │ └── path-dirname@1.0.2 </tspan>
+<tspan x="10" y="346">  ├── is-negated-glob@1.0.0 </tspan>
+<tspan x="10" y="362">  ├─┬ ordered-read-streams@1.0.0 </tspan>
+<tspan x="10" y="378">  │ └── is-stream@1.1.0 </tspan>
+<tspan x="10" y="394">  ├─┬ pumpify@1.3.5 </tspan>
+<tspan x="10" y="410">  │ ├─┬ duplexify@3.5.0 </tspan>
+<tspan x="10" y="426">  │ │ ├─┬ end-of-stream@1.0.0 </tspan>
+<tspan x="10" y="442">  │ │ │ └── once@1.3.3 </tspan>
+<tspan x="10" y="458">  │ │ └── stream-shift@1.0.0 </tspan>
+<tspan x="10" y="474">  │ └─┬ pump@1.0.2 </tspan>
+<tspan x="10" y="490">  │   └── end-of-stream@1.4.0 </tspan>
+<tspan x="10" y="506">  ├─┬ readable-stream@2.2.9 </tspan>
+<tspan x="10" y="522">  │ ├── buffer-shims@1.0.0 </tspan>
+<tspan x="10" y="538">  │ ├── core-util-is@1.0.2 </tspan>
+<tspan x="10" y="554">  │ ├── isarray@1.0.0 </tspan>
+<tspan x="10" y="570">  │ ├── process-nextick-args@1.0.7 </tspan>
+<tspan x="10" y="586">  │ ├── string_decoder@1.0.0 </tspan>
+<tspan x="10" y="602">  │ └── util-deprecate@1.0.2 </tspan>
+<tspan x="10" y="618">  ├── remove-trailing-separator@1.0.1 </tspan>
+<tspan x="10" y="634">  ├─┬ to-absolute-glob@2.0.1 </tspan>
+<tspan x="10" y="650">  │ ├─┬ extend-shallow@2.0.1 </tspan>
+<tspan x="10" y="666">  │ │ └── is-extendable@0.1.1 </tspan>
+<tspan x="10" y="682">  │ └─┬ is-absolute@0.2.6 </tspan>
+<tspan x="10" y="698">  │   ├─┬ is-relative@0.2.1 </tspan>
+<tspan x="10" y="714">  │   │ └─┬ is-unc-path@0.1.2 </tspan>
+<tspan x="10" y="730">  │   │   └── unc-path-regex@0.1.2 </tspan>
+<tspan x="10" y="746">  │   └── is-windows@0.2.0 </tspan>
+<tspan x="10" y="762">  └─┬ unique-stream@2.2.1 </tspan>
+<tspan x="10" y="778">    ├─┬ json-stable-stringify@1.0.1 </tspan>
+<tspan x="10" y="794">    │ └── jsonify@0.0.0 </tspan>
+<tspan x="10" y="810">    └─┬ through2-filter@2.0.0 </tspan>
+<tspan x="10" y="826">      ├── through2@2.0.3 </tspan>
+<tspan x="10" y="842">      └── xtend@4.0.1</tspan>
 </text>
 </svg>

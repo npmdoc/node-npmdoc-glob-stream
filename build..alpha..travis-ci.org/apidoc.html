@@ -63,9 +63,27 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.glob-stream.glob-stream">
+            function <span class="apidocSignatureSpan"></span>glob-stream
+            <span class="apidocSignatureSpan">(globs, opt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <a class="apidocElementLiA" href="#apidoc.element.glob-stream.readable">
             function <span class="apidocSignatureSpan">glob-stream.</span>readable
             <span class="apidocSignatureSpan">(ourGlob, negatives, opt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.glob-stream.toString">
+            function <span class="apidocSignatureSpan">glob-stream.</span>toString
+            <span class="apidocSignatureSpan">()</span>
             </a>
 
         </li>
@@ -126,6 +144,90 @@
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.glob-stream" id="apidoc.module.glob-stream">module glob-stream</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.glob-stream.glob-stream" id="apidoc.element.glob-stream.glob-stream">
+        function <span class="apidocSignatureSpan"></span>glob-stream
+        <span class="apidocSignatureSpan">(globs, opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function globStream(globs, opt) {
+  if (!opt) {
+    opt = {};
+  }
+
+  var ourOpt = extend({}, opt);
+  var ignore = ourOpt.ignore;
+
+  ourOpt.cwd = typeof ourOpt.cwd === &#x27;string&#x27; ? ourOpt.cwd : process.cwd();
+  ourOpt.dot = typeof ourOpt.dot === &#x27;boolean&#x27; ? ourOpt.dot : false;
+  ourOpt.silent = typeof ourOpt.silent === &#x27;boolean&#x27; ? ourOpt.silent : true;
+  ourOpt.cwdbase = typeof ourOpt.cwdbase === &#x27;boolean&#x27; ? ourOpt.cwdbase : false;
+  ourOpt.uniqueBy =  typeof ourOpt.uniqueBy === &#x27;string&#x27; ||
+                    typeof ourOpt.uniqueBy === &#x27;function&#x27; ? ourOpt.uniqueBy : &#x27;path&#x27;;
+
+  if (ourOpt.cwdbase) {
+    ourOpt.base = ourOpt.cwd;
+  }
+  // Normalize string `ignore` to array
+  if (typeof ignore === &#x27;string&#x27;) {
+    ignore = [ignore];
+  }
+  // Ensure `ignore` is an array
+  if (!Array.isArray(ignore)) {
+    ignore = [];
+  }
+
+  // Only one glob no need to aggregate
+  if (!Array.isArray(globs)) {
+    globs = [globs];
+  }
+
+  var positives = [];
+  var negatives = [];
+
+  globs.forEach(sortGlobs);
+
+  function sortGlobs(globString, index) {
+    if (typeof globString !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Invalid glob at index &#x27; + index);
+    }
+
+    var glob = isNegatedGlob(globString);
+    var globArray = glob.negated ? negatives : positives;
+
+    globArray.push({
+      index: index,
+      glob: glob.pattern,
+    });
+  }
+
+  if (positives.length === 0) {
+    throw new Error(&#x27;Missing positive glob&#x27;);
+  }
+
+  // Create all individual streams
+  var streams = positives.map(streamFromPositive);
+
+  // Then just pipe them to a single unique stream and return it
+  var aggregate = new Combine(streams);
+  var uniqueStream = unique(ourOpt.uniqueBy);
+
+  return pumpify.obj(aggregate, uniqueStream);
+
+  function streamFromPositive(positive) {
+    var negativeGlobs = negatives
+      .filter(indexGreaterThan(positive.index))
+      .map(toGlob)
+      .concat(ignore);
+    return new GlobStream(positive.glob, negativeGlobs, ourOpt);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 
     <h2>
@@ -202,6 +304,21 @@
   }
 
   globber.once(&#x27;error&#x27;, onError);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.glob-stream.toString" id="apidoc.element.glob-stream.toString">
+        function <span class="apidocSignatureSpan">glob-stream.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
